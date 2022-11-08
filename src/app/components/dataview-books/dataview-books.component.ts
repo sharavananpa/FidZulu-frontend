@@ -2,16 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { SelectItem } from 'primeng/api';
 import { DataService } from '../../services/data.service';
 import { PriceLocationService } from '../../services/price-location.service';
-import { Toy } from '../../models/toy';
+import { Book } from '../../models/book';
 
 @Component({
-  selector: 'app-dataview-toys',
-  templateUrl: './dataview-toys.component.html',
-  styleUrls: ['./dataview-toys.component.scss']
+  selector: 'app-dataview-books',
+  templateUrl: './dataview-books.component.html',
+  styleUrls: ['./dataview-books.component.scss']
 })
-export class DataviewToysComponent implements OnInit {
+export class DataviewBooksComponent implements OnInit {
 
-  toys: Toy[] = [];
+  books: Book[] = [];
 
   loading = true;
   errorMessage = "";
@@ -20,7 +20,7 @@ export class DataviewToysComponent implements OnInit {
   sortOrder: number = 0;
   sortField: string = "";
 
-  productCategory: string = "toys";
+  productCategory: string = "books";
   productLocation: string = "IN";
 
   constructor(private ds: DataService, private pls: PriceLocationService) { }
@@ -43,7 +43,7 @@ export class DataviewToysComponent implements OnInit {
     this.ds.getData(productCategory, productLocation).subscribe({
       next: (response) => {
         console.log('Response received');
-        this.toys = response.data;
+        this.books = response.data;
       },
       error: (error) => {
         console.error('Request failed with error');

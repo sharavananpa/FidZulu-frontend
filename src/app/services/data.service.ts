@@ -2,8 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
-import { Bike } from '../models/bike';
-import { Toy } from '../models/toy';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +12,14 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  getData(): Observable<any> {
-    return this.http.get(this.BASE_URL + '/toys');
+  getData(productCategory: string, priceLocation: string): Observable<any> {
+    const PATH: string = '/' + productCategory + '?location=' + priceLocation;
+    return this.http.get(this.BASE_URL + PATH)
+      .pipe(
+        catchError((error) => {
+          console.log('Error caught in service')
+          console.error(error);
+          return throwError(() => error);
+        }));
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
+import { PriceLocationService } from '../../services/price-location.service';
 
 @Component({
   selector: 'app-menu',
@@ -9,42 +10,82 @@ import { MenuItem } from 'primeng/api';
 export class MenuComponent implements OnInit {
 
   items: MenuItem[] = [];
+  itemsTiered: MenuItem[] = [];
 
-  constructor() { }
+  constructor(private pls: PriceLocationService) { }
 
   ngOnInit(): void {
     this.items = [
       {
         label: 'Bikes',
-        icon: 'pi pi-fw pi-bolt',
+        icon: 'fa fa-motorcycle',
         routerLink: 'bikes'
       },
       {
         label: 'Books',
-        icon: 'pi pi-fw pi-book',
+        icon: 'fa fa-book-open',
         routerLink: 'books'
       },
       {
         label: 'DVDs',
-        icon: 'pi pi-fw pi-history',
+        icon: 'fa fa-compact-disc',
         routerLink: 'dvds'
       },
       {
         label: 'Food',
-        icon: 'pi pi-fw pi-chart-line',
+        icon: 'fa fa-bowl-food',
         routerLink: 'food'
       },
       {
         label: 'Laptops',
-        icon: 'pi pi-fw pi-chart-line',
+        icon: 'fa fa-laptop',
         routerLink: 'laptops'
       },
       {
         label: 'Toys',
-        icon: 'pi pi-fw pi-chart-line',
+        icon: 'fa fa-gamepad',
         routerLink: 'toys'
       }
     ];
+
+    this.itemsTiered = [
+      {
+        label: 'About the team',
+        icon: 'pi pi-fw pi-sitemap',
+      },
+      {
+        label: 'Get project files',
+        icon: 'pi pi-fw pi-github',
+      },
+      {
+        separator: true
+      },
+      {
+        label: 'Change location',
+        icon: 'pi pi-fw pi-map-marker',
+        items: [
+          {
+            label: 'India',
+            icon: 'fa fa-indian-rupee-sign',
+            command: () => this.sendPriceLocation('IN')
+          },
+          {
+            label: 'North Carolina',
+            icon: 'fa fa-dollar-sign',
+            command: () => this.sendPriceLocation('US-NC')
+          },
+          {
+            label: 'Ireland',
+            icon: 'fa fa-euro-sign',
+            command: () => this.sendPriceLocation('IE')
+          }
+        ]
+      }
+    ];
+  }
+
+  sendPriceLocation(location: string): void {
+    this.pls.updatePriceLocation(location);
   }
 
 }

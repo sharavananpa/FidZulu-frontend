@@ -8,17 +8,30 @@ import { DropdownModule } from 'primeng/dropdown';
 import { RatingModule } from 'primeng/rating';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
-import {MenubarModule} from 'primeng/menubar';
+import { MenubarModule } from 'primeng/menubar';
+import { TieredMenuModule } from 'primeng/tieredmenu';
 
 import { AppComponent } from './app.component';
 import { DataviewToysComponent } from './components/dataview-toys/dataview-toys.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { LogoComponent } from './components/logo/logo.component';
+import { DataviewBikesComponent } from './components/dataview-bikes/dataview-bikes.component';
+import { DataviewBooksComponent } from './components/dataview-books/dataview-books.component';
+import { DataviewDvdsComponent } from './components/dataview-dvds/dataview-dvds.component';
+import { DataviewFoodComponent } from './components/dataview-food/dataview-food.component';
+import { DataviewLaptopsComponent } from './components/dataview-laptops/dataview-laptops.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DataviewToysComponent,
-    MenuComponent
+    MenuComponent,
+    LogoComponent,
+    DataviewBikesComponent,
+    DataviewBooksComponent,
+    DataviewDvdsComponent,
+    DataviewFoodComponent,
+    DataviewLaptopsComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +43,8 @@ import { MenuComponent } from './components/menu/menu.component';
     RatingModule,
     FormsModule,
     ButtonModule,
-    MenubarModule
+    MenubarModule,
+    TieredMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

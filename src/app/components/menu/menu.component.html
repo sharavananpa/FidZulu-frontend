@@ -1,10 +1,11 @@
 <div class="header">
     <p-menubar [model]="items">
         <ng-template pTemplate="start">
-            <!-- <app-logo></app-logo> -->
+            <app-logo></app-logo>
         </ng-template>
         <ng-template pTemplate="end">
-            xxx
+            <button icon="pi pi-wrench" class="p-button-rounded p-button-primary p-button-text mr-3" label="More options" type="button" pButton pRipple (click)="menu.toggle($event)"></button>
+            <p-tieredMenu #menu styleClass="tiered-menu" [model]="itemsTiered" [popup]="true"></p-tieredMenu>
         </ng-template>
     </p-menubar>
 </div>

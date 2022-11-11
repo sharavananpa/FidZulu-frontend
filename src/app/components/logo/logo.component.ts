@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-logo',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogoComponent implements OnInit {
 
+  @Input() glitch: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

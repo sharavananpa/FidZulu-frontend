@@ -19,32 +19,32 @@ export class MenuComponent implements OnInit {
       {
         label: 'Bikes',
         icon: 'fa fa-motorcycle',
-        routerLink: 'bikes'
+        routerLink: '/bikes'
       },
       {
         label: 'Books',
         icon: 'fa fa-book-open',
-        routerLink: 'books'
+        routerLink: '/books'
       },
       {
         label: 'DVDs',
         icon: 'fa fa-compact-disc',
-        routerLink: 'dvds'
+        routerLink: '/dvds'
       },
       {
         label: 'Food',
         icon: 'fa fa-bowl-food',
-        routerLink: 'food'
+        routerLink: '/food'
       },
       {
         label: 'Laptops',
         icon: 'fa fa-laptop',
-        routerLink: 'laptops'
+        routerLink: '/laptops'
       },
       {
         label: 'Toys',
         icon: 'fa fa-gamepad',
-        routerLink: 'toys'
+        routerLink: '/toys'
       }
     ];
 
@@ -52,10 +52,23 @@ export class MenuComponent implements OnInit {
       {
         label: 'About the team',
         icon: 'pi pi-fw pi-sitemap',
+        routerLink: '/about'
       },
       {
         label: 'Get project files',
         icon: 'pi pi-fw pi-github',
+        items: [
+          {
+            label: 'FrontEnd',
+            url: 'https://github.com/sharavananpa/FidZulu-frontend',
+            icon: 'pi pi-fw pi-desktop',
+          },
+          {
+            label: 'BackEnd',
+            url: 'https://github.com/sharavananpa/FidZulu-frontend',
+            icon: 'pi pi-fw pi-server',
+          },
+        ]
       },
       {
         separator: true

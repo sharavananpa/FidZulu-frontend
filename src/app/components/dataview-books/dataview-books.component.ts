@@ -34,16 +34,16 @@ export class DataviewBooksComponent implements OnInit {
     this.getProductData(this.productCategory, this.productLocation);
 
     this.sortOptions = [
-      { label: 'Ascending', value: 'name' },
-      { label: 'Descending', value: '!name' }
+      { label: 'Ascending', value: 'Title' },
+      { label: 'Descending', value: '!Title' }
     ];
   }
 
   getProductData(productCategory: string, productLocation: string): void {
-    this.ds.getData(productCategory, productLocation).subscribe({
+    this.ds.getData_2(productCategory, productLocation).subscribe({
       next: (response) => {
         console.log('Response received');
-        this.books = response.data;
+        this.books = response;
       },
       error: (error) => {
         console.error('Request failed with error');

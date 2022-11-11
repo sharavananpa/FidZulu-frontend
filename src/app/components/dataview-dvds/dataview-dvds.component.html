@@ -3,8 +3,8 @@
         [sortOrder]="sortOrder" layout="grid">
         <ng-template pTemplate="header">
             <div class="flex flex-column md:flex-row md:justify-content-between">
-                <p-dropdown [options]="sortOptions" placeholder="Sort By Name"
-                    (onChange)="onSortChange($event)" styleClass="mb-2 md:mb-0"></p-dropdown>
+                <p-dropdown [options]="sortOptions" placeholder="Sort By Name" (onChange)="onSortChange($event)"
+                    styleClass="mb-2 md:mb-0"></p-dropdown>
             </div>
         </ng-template>
         <ng-template let-dvd pTemplate="gridItem">
@@ -12,18 +12,19 @@
                 <div class="product-grid-item card">
                     <div class="product-grid-item-top">
                         <div>
-                            <i class="pi pi-tag product-category-icon"></i>
-                            <span class="product-category">{{dvd.brand}}</span>
+                            <i class="pi pi-star-half-stroke product-category-icon"></i>
+                            <span class="product-category">{{dvd.mpaa_rating}}</span>
                         </div>
                         <span [class]="'product-badge status-instock'">INSTOCK</span>
                     </div>
                     <div class="product-grid-item-content">
-                        <div class="product-name">{{dvd.name}}</div>
-                        <div class="product-description">Age group: {{dvd['age-group']}}</div>
+                        <div class="product-name">{{dvd.title}}</div>
+                        <div class="product-description">Studio: {{dvd.studio}}</div>
+                        <div class="product-description">Time: {{dvd.time}}</div>
                         <p-rating [ngModel]="3" [readonly]="false" [cancel]="false"></p-rating>
                     </div>
                     <div class="product-grid-item-bottom">
-                        <span class="product-price">{{dvd.prize | currency: getCurrency()}}</span>
+                        <span class="product-price">{{dvd.price | currency: getCurrency()}}</span>
                         <p-button icon="pi pi-shopping-cart"></p-button>
                     </div>
                 </div>

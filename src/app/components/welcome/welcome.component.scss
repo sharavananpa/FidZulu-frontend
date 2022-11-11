@@ -1,0 +1,25 @@
+.wrapper {
+    margin: 10rem;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote {
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome, .quote {
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+}

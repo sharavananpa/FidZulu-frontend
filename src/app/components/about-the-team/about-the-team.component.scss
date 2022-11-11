@@ -1,0 +1,76 @@
+:host ::ng-deep .p-organizationchart {
+    .p-person {
+        padding: 0rem;
+        border: 0 none;
+    }
+
+    .p-1 .node-header {
+        background-color: #7247bc;
+    }
+
+    .p-1 .node-content {
+        border: 1px solid #7247bc;
+    }
+
+    .p-2 .node-header {
+        background-color: #a534b6;
+    }
+
+    .p-2 .node-content {
+        border: 1px solid #a534b6;
+    }
+
+    .p-3 .node-header {
+        background-color: #e9286f;
+    }
+
+    .p-3 .node-content {
+        border: 1px solid #e9286f;
+    }
+
+    .node-header,
+    .node-content {
+        padding: .5em .7rem;
+    }
+
+    .node-header {
+        background-color: #495ebb;
+        color: #ffffff;
+    }
+
+    .node-content {
+        text-align: center;
+        border: 1px solid #495ebb;
+        padding: 1rem;
+    }
+
+    .node-content img {
+        border-radius: 50%;
+    }
+
+    .department-1 {
+        background-color: #7247bc;
+        color: #ffffff;
+    }
+
+    .department-2 {
+        background-color: #a534b6;
+        color: #ffffff;
+    }
+
+    .department-3 {
+        background-color: #e9286f;
+        color: #ffffff;
+    }
+}
+
+.wrapper {
+    margin-top: 7rem;
+    margin-bottom: 5rem;
+}
+
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }

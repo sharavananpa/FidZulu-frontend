@@ -9,3 +9,62 @@
     background-color: #495057;
     color: white;
 }
+
+.glitchedAnim {
+    margin: 0rem 1.5rem;
+    animation: glitchAnim1 3s infinite;
+}
+
+@keyframes glitchAnim1 {
+    7% {
+        transform: none;
+    }
+
+    10% {
+        transform: translate(6px, -2px);
+    }
+
+    13% {
+        transform: none;
+    }
+
+    20% {
+        transform: none;
+    }
+
+    23% {
+        transform: translate(-12px, -7px);
+    }
+
+    26% {
+        transform: none;
+    }
+
+    40% {
+        transform: none;
+    }
+
+    43% {
+        transform: translate(10px, -9px);
+    }
+
+    46% {
+        transform: none;
+    }
+
+    65% {
+        transform: none;
+    }
+
+    68% {
+        transform: translate(7px, 5px);
+    }
+
+    71% {
+        transform: none;
+    }
+
+    100% {
+        transform: none;
+    }
+}

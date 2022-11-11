@@ -40,7 +40,7 @@ export class DataviewFoodComponent implements OnInit {
   }
 
   getProductData(productCategory: string, productLocation: string): void {
-    this.ds.getData(productCategory, productLocation).subscribe({
+    this.ds.getData_1(productCategory, productLocation).subscribe({
       next: (response) => {
         console.log('Response received');
         this.food = response.data;

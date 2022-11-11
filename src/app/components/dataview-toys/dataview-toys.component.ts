@@ -40,7 +40,7 @@ export class DataviewToysComponent implements OnInit {
   }
 
   getProductData(productCategory: string, productLocation: string): void {
-    this.ds.getData(productCategory, productLocation).subscribe({
+    this.ds.getData_1(productCategory, productLocation).subscribe({
       next: (response) => {
         console.log('Response received');
         this.toys = response.data;

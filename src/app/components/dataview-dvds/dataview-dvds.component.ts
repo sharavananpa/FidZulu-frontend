@@ -34,13 +34,13 @@ export class DataviewDvdsComponent implements OnInit {
     this.getProductData(this.productCategory, this.productLocation);
 
     this.sortOptions = [
-      { label: 'Ascending', value: 'name' },
-      { label: 'Descending', value: '!name' }
+      { label: 'Ascending', value: 'title' },
+      { label: 'Descending', value: '!title' }
     ];
   }
 
   getProductData(productCategory: string, productLocation: string): void {
-    this.ds.getData(productCategory, productLocation).subscribe({
+    this.ds.getData_2(productCategory, productLocation).subscribe({
       next: (response) => {
         console.log('Response received');
         this.dvds = response.data;

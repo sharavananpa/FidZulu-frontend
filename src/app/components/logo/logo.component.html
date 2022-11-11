@@ -1,3 +1,11 @@
-<div class="logo">
-    FidZulu
+<div *ngIf="glitch == false" class="logo" routerLink="/">
+    <div>
+        FidZulu
+    </div> 
+</div>
+
+<div class="logo glitchedAnim" *ngIf="glitch == true">
+    <div>
+        FidZulu
+    </div> 
 </div>

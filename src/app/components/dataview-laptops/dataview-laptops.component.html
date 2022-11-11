@@ -18,12 +18,14 @@
                         <span [class]="'product-badge status-instock'">INSTOCK</span>
                     </div>
                     <div class="product-grid-item-content">
-                        <div class="product-name">{{laptop.name}}</div>
-                        <div class="product-description">Age group: {{laptop['age-group']}}</div>
+                        <div class="product-name">{{laptop.product}}</div>
+                        <div class="product-description">CPU: {{laptop.CPU}}</div>
+                        <div class="product-description">Memory: {{laptop.memory}}</div>
+
                         <p-rating [ngModel]="3" [readonly]="false" [cancel]="false"></p-rating>
                     </div>
                     <div class="product-grid-item-bottom">
-                        <span class="product-price">{{laptop.prize | currency: getCurrency()}}</span>
+                        <span class="product-price">{{laptop.price | currency: getCurrency()}}</span>
                         <p-button icon="pi pi-shopping-cart"></p-button>
                     </div>
                 </div>

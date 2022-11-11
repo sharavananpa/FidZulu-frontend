@@ -12,18 +12,18 @@
                 <div class="product-grid-item card">
                     <div class="product-grid-item-top">
                         <div>
-                            <i class="pi pi-tag product-category-icon"></i>
+                            <i class="fa fa-tag product-category-icon"></i>
                             <span class="product-category">{{bike.brand}}</span>
                         </div>
                         <span [class]="'product-badge status-instock'">INSTOCK</span>
                     </div>
                     <div class="product-grid-item-content">
                         <div class="product-name">{{bike.name}}</div>
-                        <div class="product-description">Age group: {{bike['age-group']}}</div>
+                        <div class="product-description">Color: {{bike.color}}</div>
                         <p-rating [ngModel]="3" [readonly]="false" [cancel]="false"></p-rating>
                     </div>
                     <div class="product-grid-item-bottom">
-                        <span class="product-price">{{bike.prize | currency: getCurrency()}}</span>
+                        <span class="product-price">{{bike.price}}</span>
                         <p-button icon="pi pi-shopping-cart"></p-button>
                     </div>
                 </div>

@@ -12,18 +12,19 @@
                 <div class="product-grid-item card">
                     <div class="product-grid-item-top">
                         <div>
-                            <i class="pi pi-tag product-category-icon"></i>
+                            <i class="fa fa-tag product-category-icon"></i>
                             <span class="product-category">{{food.brand}}</span>
                         </div>
                         <span [class]="'product-badge status-instock'">INSTOCK</span>
                     </div>
                     <div class="product-grid-item-content">
                         <div class="product-name">{{food.name}}</div>
-                        <div class="product-description">Age group: {{food['age-group']}}</div>
+                        <div class="product-description">Weight: {{food.weight}}</div>
+                        <div class="product-description">Calories: {{food.calories}}</div>
                         <p-rating [ngModel]="3" [readonly]="false" [cancel]="false"></p-rating>
                     </div>
                     <div class="product-grid-item-bottom">
-                        <span class="product-price">{{food.prize | currency: getCurrency()}}</span>
+                        <span class="product-price">{{food.price | currency: getCurrency()}}</span>
                         <p-button icon="pi pi-shopping-cart"></p-button>
                     </div>
                 </div>

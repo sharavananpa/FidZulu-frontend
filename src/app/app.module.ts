@@ -10,6 +10,9 @@ import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { MenubarModule } from 'primeng/menubar';
 import { TieredMenuModule } from 'primeng/tieredmenu';
+import { OrganizationChartModule } from 'primeng/organizationchart';
+import { DragScrollModule } from 'ngx-drag-scroll';
+
 
 import { AppComponent } from './app.component';
 import { DataviewToysComponent } from './components/dataview-toys/dataview-toys.component';
@@ -20,6 +23,8 @@ import { DataviewBooksComponent } from './components/dataview-books/dataview-boo
 import { DataviewDvdsComponent } from './components/dataview-dvds/dataview-dvds.component';
 import { DataviewFoodComponent } from './components/dataview-food/dataview-food.component';
 import { DataviewLaptopsComponent } from './components/dataview-laptops/dataview-laptops.component';
+import { AboutTheTeamComponent } from './components/about-the-team/about-the-team.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +36,9 @@ import { DataviewLaptopsComponent } from './components/dataview-laptops/dataview
     DataviewBooksComponent,
     DataviewDvdsComponent,
     DataviewFoodComponent,
-    DataviewLaptopsComponent
+    DataviewLaptopsComponent,
+    AboutTheTeamComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +51,9 @@ import { DataviewLaptopsComponent } from './components/dataview-laptops/dataview
     FormsModule,
     ButtonModule,
     MenubarModule,
-    TieredMenuModule
+    TieredMenuModule,
+    OrganizationChartModule,
+    DragScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]

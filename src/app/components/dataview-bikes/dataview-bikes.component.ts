@@ -40,10 +40,10 @@ export class DataviewBikesComponent implements OnInit {
   }
 
   getProductData(productCategory: string, productLocation: string): void {
-    this.ds.getData(productCategory, productLocation).subscribe({
+    this.ds.getData_1(productCategory, productLocation).subscribe({
       next: (response) => {
         console.log('Response received');
-        this.bikes = response.data;
+        this.bikes = response.bikes;
       },
       error: (error) => {
         console.error('Request failed with error');
